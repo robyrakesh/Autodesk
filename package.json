@@ -1,0 +1,15 @@
+{
+  "name": "autdesk",
+  "version": "1.0.0",
+  "description": "e2e tests ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.11.0",
+    "@faker-js/faker": "^7.6.0"
+  }
+}
