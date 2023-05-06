@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.11.0",
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "@shelex/cypress-allure-plugin": "^2.38.3"
   }
 }
