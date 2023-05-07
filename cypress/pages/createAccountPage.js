@@ -44,14 +44,5 @@ export default class createAccountPage {
     }
     cy.get('.passwordHintPopup').should('be.visible')
   }
-
-  static validateFormSubmission() {
-    cy.get(SUBMISSION_MESSAGE).should('be.visible')
-    cy.get('h3 > span').should('include.text', 'You\'re one step closer to unleashing procurement possibilities.')
-  }
-
-  static selectDesiredUseCase(useCase) {
-    cy.get(`input[value="${useCase}"]`).click({force: true})
-  }
-
+  
 }

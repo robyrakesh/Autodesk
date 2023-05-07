@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-
 const SIGN_IN = '.uh-me-menu-sign-in'
 const CREATE_ACCOUNT = '#register_link'
 const SEARCH_FIELD = '.bhv-usf-1fph9ax'
