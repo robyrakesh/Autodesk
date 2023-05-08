@@ -1,6 +1,6 @@
 name: Autodesk e2e tests
 on:
-  schedule:
+ # schedule:
   #  - cron: "0 5 * * *"
   workflow_dispatch:
   push:
