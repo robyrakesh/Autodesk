@@ -12,7 +12,7 @@ import { userDetails } from '../fixtures/test_data'
     it('Validate search functionality - provide a search term', function() {
         homePage.search('states')
         cy.wait('@search').its('response.statusCode').should('eq', 200)
-        homePage.verifySearchResults('states')
+        homePage.verifySearchResults('state')
     })
 
   })

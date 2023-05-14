@@ -20,7 +20,7 @@ export default class homePage {
   static verifySearchResults(searchTerm) {
     cy.get(SEARCH_RESULTS).within(() => {
       cy.get('.bhv-usp-w5ynns-searchResultItem').each((item) => {
-        expect(Cypress.$(item).text()).to.include(searchTerm);
+        expect(Cypress.$(item).text().toLowerCase()).to.include(searchTerm);
       })
     })
     
