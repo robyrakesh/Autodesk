@@ -8,7 +8,7 @@ import { userDetails } from '../fixtures/test_data'
       cy.visit('/')
     })
 
-    it.skip('Verify that the account is created succesfully - Fill in all the required fields', function() {
+    it('Verify that the account is created succesfully - Fill in all the required fields', function() {
        homePage.navigateToCreateAccount()
        createAccountPage.fillForm(userDetails)
        createAccountPage.submitForm()
