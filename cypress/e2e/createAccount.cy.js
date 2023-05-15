@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import { homePage, createAccountPage } from '../pages/index'
-import { userDetails } from '../fixtures/test_data'
+import { userDetails, generateRandomEmail } from '../fixtures/test_data'
 
   describe('Validate creating an account', function() {
     beforeEach(function()  {
@@ -9,6 +9,7 @@ import { userDetails } from '../fixtures/test_data'
     })
 
     it('Verify that the account is created succesfully - Fill in all the required fields', function() {
+      userDetails.email = generateRandomEmail()
        homePage.navigateToCreateAccount()
        createAccountPage.fillForm(userDetails)
        createAccountPage.submitForm()

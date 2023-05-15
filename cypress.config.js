@@ -15,6 +15,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       allureWriter(on, config)
     },
+    experimentalRunAllSpecs: true,
     baseUrl: 'https://www.autodesk.ca',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
