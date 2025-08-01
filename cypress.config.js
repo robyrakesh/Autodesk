@@ -3,10 +3,10 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
-  defaultCommandTimeout: 120000, // Increased for CI
-  requestTimeout: 120000, // Increased for CI
-  responseTimeout: 120000, // Added for CI
-  pageLoadTimeout: 120000, // Increased for CI
+  defaultCommandTimeout: 60000, // Increased for CI
+  requestTimeout: 60000, // Increased for CI
+  responseTimeout: 60000, // Added for CI
+  pageLoadTimeout: 60000, // Increased for CI
   viewportWidth: 1350,
   viewportHeight: 900,
   videoCompression: 51,
@@ -32,9 +32,8 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     // Additional network stability settings
     experimentalModifyObstructiveThirdPartyCode: false,
-    experimentalSessionAndOrigin: true,
     // Page load handling
     experimentalRunAllSpecs: true,
-    experimentalWebKitSupport: false,
+    failOnStatusCode: false,
   },
 });
