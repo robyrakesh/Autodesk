@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cy:run": "cypress run --headless --browser chrome --env allure=true",
-    "clean:folders": "rm -R -f allure-report/ && rm -R -f allure-results/"
+    "allure:report": "allure generate allure-results --clean && allure serve allure-results",
+    "clean:allure": "rm -R -f allure-report/ && rm -R -f allure-results/"
   },
   "author": "",
   "license": "ISC",

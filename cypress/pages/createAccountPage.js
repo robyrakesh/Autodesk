@@ -27,13 +27,6 @@ export default class createAccountPage {
     
   }
 
-  static verifyAccountCreated({firstName, lastName}) {
-    cy.get('.msg').should('have.text','Account created')
-    cy.get(DONE).click()
-    cy.get(SIGN_IN).click()
-    cy.get(USER_NAME).contains(firstName + ' ' + lastName)
-  }
-
   static submitForm() {
     cy.get(SUBMIT).click()
   }
@@ -43,6 +36,10 @@ export default class createAccountPage {
       cy.get(ERROR).eq(i).should('include.text', 'Please enter')
     }
     cy.get('.passwordHintPopup').should('be.visible')
+  }
+
+  static verifyCaptchaIframe() {
+    cy.get('iframe[src*="hcaptcha.com"]').should('be.visible')
   }
   
 }

@@ -1,9 +1,9 @@
 
 export const userDetails = {
-    firstName: 'Mounika',
-    lastName:'P',
+    firstName: 'Rakesh',
+    lastName:'Roby',
     email: '',
-    password:'Test@1234'
+    password:'Test@12345678'
 }
 
 export function generateRandomEmail() {

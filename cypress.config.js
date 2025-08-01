@@ -8,7 +8,7 @@ module.exports = defineConfig({
   viewportWidth: 1350,
   viewportHeight: 900,
   videoCompression: 51,
-  projectId: "2eepk3",
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
@@ -16,7 +16,7 @@ module.exports = defineConfig({
       allureWriter(on, config)
     },
     experimentalRunAllSpecs: true,
-    baseUrl: 'https://www.autodesk.ca',
+    baseUrl: 'https://www.autodesk.com',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
 });
