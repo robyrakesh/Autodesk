@@ -5,7 +5,7 @@ e2e tests for Autodesk's marketing website targeting the Create Account Page and
 
 ## Allure Reports
 
-There are few jobs defined in the e2e-autodesk.yml workflow, which will take care of creating a test report using allure and deploying it to the Github Page server. So, we have a publicliy available free test reporting dashboard which can be accessed by anyone. Link to the test report :- 
+There are few jobs defined in the e2e-autodesk.yml workflow, which will take care of creating a test report using allure and deploying it to the Github Page server. So, we have a publicliy available free test reporting dashboard which can be accessed by anyone. Link to the test report :- https://robyrakesh.github.io/Autodesk/
 
 
 ## Available Scripts
