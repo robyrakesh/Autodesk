@@ -4,7 +4,7 @@
   "description": "e2e tests ",
   "main": "index.js",
   "scripts": {
-    "cy:run": "cypress run --headless --browser chrome --env allure=true",
+    "cy:run": "cypress run --headed --browser chrome --env allure=true",
     "allure:report": "allure generate allure-results --clean && allure serve allure-results",
     "clean:allure": "rm -R -f allure-report/ && rm -R -f allure-results/"
   },
