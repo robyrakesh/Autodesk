@@ -11,7 +11,6 @@ module.exports = defineConfig({
   viewportHeight: 900,
   videoCompression: 51,
   userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
-  experimentalRunAllSpecs: true,
   retries: {
     runMode: 2,
     openMode: 0
@@ -29,5 +28,6 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
     experimentalModifyObstructiveThirdPartyCode: false,
     modifyObstructiveCode: false,
+    experimentalRunAllSpecs: true,
   },
 });
