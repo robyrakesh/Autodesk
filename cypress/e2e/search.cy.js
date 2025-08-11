@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
-import { homePage,createAccountPage } from '../pages/index'
-import { userDetails } from '../fixtures/test_data'
+import { homePage } from '../pages/index'
 
 describe('Validate Search', function() {
   beforeEach(function()  {

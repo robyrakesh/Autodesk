@@ -3,14 +3,14 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
-  defaultCommandTimeout: 60000, // Increased for CI
-  requestTimeout: 60000, // Increased for CI
-  responseTimeout: 60000, // Added for CI
-  pageLoadTimeout: 60000, // Increased for CI
+  defaultCommandTimeout: 60000, 
+  requestTimeout: 60000, 
+  responseTimeout: 60000, 
+  pageLoadTimeout: 60000, 
   viewportWidth: 1350,
   viewportHeight: 900,
   videoCompression: 51,
-  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+  //userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
   retries: {
     runMode: 2,
     openMode: 0
@@ -18,22 +18,14 @@ module.exports = defineConfig({
   // Network stability settings
   numTestsKeptInMemory: 0,
   experimentalMemoryManagement: true,
-  // Page load optimization
-  video: false,
+  video: true,
   screenshotOnRunFailure: true,
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
       allureWriter(on, config)
     },
-    experimentalRunAllSpecs: true,
     baseUrl: 'https://www.autodesk.com',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
-    // Additional network stability settings
-    experimentalModifyObstructiveThirdPartyCode: false,
-    // Page load handling
-    experimentalRunAllSpecs: true,
     failOnStatusCode: false,
   },
 });
