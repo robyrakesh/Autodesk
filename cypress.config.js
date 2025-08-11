@@ -15,17 +15,16 @@ module.exports = defineConfig({
     runMode: 2,
     openMode: 0
   },
-  // Network stability settings
   numTestsKeptInMemory: 0,
   experimentalMemoryManagement: true,
   video: true,
   screenshotOnRunFailure: true,
+  failOnStatusCode: false,
   e2e: {
     setupNodeEvents(on, config) {
       allureWriter(on, config)
     },
     baseUrl: 'https://www.autodesk.com',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
-    failOnStatusCode: false,
   },
 });
