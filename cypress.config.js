@@ -10,7 +10,7 @@ module.exports = defineConfig({
   viewportWidth: 1350,
   viewportHeight: 900,
   videoCompression: 51,
-  //userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
   retries: {
     runMode: 2,
     openMode: 0
@@ -19,12 +19,16 @@ module.exports = defineConfig({
   experimentalMemoryManagement: true,
   video: true,
   screenshotOnRunFailure: true,
-  failOnStatusCode: false,
+  videoCompression: 32,
   e2e: {
     setupNodeEvents(on, config) {
       allureWriter(on, config)
+      config.failOnStatusCode = false
+      return config
     },
     baseUrl: 'https://www.autodesk.com',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
+    experimentalModifyObstructiveThirdPartyCode: false,
+    modifyObstructiveCode: false,
   },
 });
