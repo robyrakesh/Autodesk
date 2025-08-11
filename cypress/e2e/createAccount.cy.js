@@ -5,7 +5,7 @@ import { userDetails, generateRandomEmail } from '../fixtures/test_data'
 
 describe('Validate creating an account', function() {
   beforeEach(function()  {
-    cy.visit('/')
+    cy.visit('/', { failOnStatusCode: false })
   })
 
   it('Verify that the account is created successfully - Fill in all the required fields', function() {

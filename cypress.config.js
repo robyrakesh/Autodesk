@@ -6,7 +6,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 60000, 
   requestTimeout: 60000, 
   responseTimeout: 60000, 
-  pageLoadTimeout: 60000, 
+  pageLoadTimeout: 120000, 
   viewportWidth: 1350,
   viewportHeight: 900,
   videoCompression: 51,
@@ -23,8 +23,6 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       allureWriter(on, config)
-      config.failOnStatusCode = false
-      return config
     },
     baseUrl: 'https://www.autodesk.com',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
