@@ -1,7 +1,7 @@
 
 # Autodesk 
 
-e2e tests for Autodesk's marketing website targeting the Create Account Page and search functionality. Tests are written using Cypress and JavaScript and using a page object model. Test report are generated using allure reports and all the test report and artifacts are stored in a github branch 'gh-pages'. Also, as part of this test, a free test reporting dashboard has been created using Allure and hosted on Github Pages. Also, used Cypress Dashboard for test reporting and test parallelization 
+e2e tests for Autodesk's marketing website targeting the Create Account Page and search functionality. Tests are written using Cypress and JavaScript and using a page object model. Test report are generated using allure reports and all the test report and artifacts are stored in a github branch 'gh-pages'. Also, as part of this test, a free test reporting dashboard has been created using Allure and hosted on Github Pages.  
 
 ## Allure Reports
 
