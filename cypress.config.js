@@ -3,14 +3,15 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
-  defaultCommandTimeout: 60000, 
-  requestTimeout: 60000, 
-  responseTimeout: 60000, 
+  defaultCommandTimeout: 120000, 
+  requestTimeout: 120000, 
+  responseTimeout: 120000, 
   pageLoadTimeout: 120000, 
   viewportWidth: 1350,
   viewportHeight: 900,
   videoCompression: 51,
   userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+  experimentalRunAllSpecs: true,
   retries: {
     runMode: 2,
     openMode: 0

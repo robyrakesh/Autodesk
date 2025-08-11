@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Custom visit command with retry logic for network failures
+Cypress.Commands.add('visitWithRetry', (url, options = {}) => {
+  const defaultOptions = {
+    failOnStatusCode: false,
+    timeout: 120000,
+    retryOnNetworkFailure: true
+  };
+  
+  const mergedOptions = { ...defaultOptions, ...options };
+  
+  return cy.visit(url, mergedOptions);
+});

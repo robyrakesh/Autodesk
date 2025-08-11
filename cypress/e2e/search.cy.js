@@ -5,7 +5,7 @@ import { homePage } from '../pages/index'
 describe('Validate Search', function() {
   beforeEach(function()  {
     cy.intercept('GET', 'https://beehive.autodesk.com/community/service/rest/uh/v1/**').as('search')
-    cy.visit('/', { failOnStatusCode: false })
+    cy.visitWithRetry('/')
   })
 
   it('Validate search functionality - provide a search term', function() {
