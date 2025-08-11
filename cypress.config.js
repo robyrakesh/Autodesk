@@ -29,5 +29,7 @@ module.exports = defineConfig({
     experimentalModifyObstructiveThirdPartyCode: false,
     modifyObstructiveCode: false,
     experimentalRunAllSpecs: true,
+    chromeWebSecurity: false,
+    experimentalSessionAndOrigin: false,
   },
 });

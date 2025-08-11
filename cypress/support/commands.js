@@ -34,5 +34,10 @@ Cypress.Commands.add('visitWithRetry', (url, options = {}) => {
   
   const mergedOptions = { ...defaultOptions, ...options };
   
-  return cy.visit(url, mergedOptions);
+  return cy.visit(url, mergedOptions).then(() => {
+    // Wait for a key element instead of full page load
+    cy.get('body', { timeout: 30000 }).should('be.visible');
+    // Additional wait for page to be interactive
+    cy.wait(2000);
+  });
 });
