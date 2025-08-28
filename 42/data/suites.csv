@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","120132","Validate search functionality - provide a search term","","Thu Aug 28 05:31:22 UTC 2025","broken","Thu Aug 28 05:33:22 UTC 2025","","Validate Search","",""
+"","120155","Verify that the account is created successfully - Fill in all the required fields","","Thu Aug 28 05:24:43 UTC 2025","broken","Thu Aug 28 05:26:43 UTC 2025","","Validate creating an account","",""
+"","0","Validate the unsuccessful account creation - Leave required fields empty","","Thu Aug 28 05:26:43 UTC 2025","skipped","Thu Aug 28 05:26:43 UTC 2025","","Validate creating an account","",""
